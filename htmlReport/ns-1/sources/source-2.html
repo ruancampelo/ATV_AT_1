@@ -1,0 +1,143 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > NumerosComplexos</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.example</a>
+</div>
+
+<h1>Coverage Summary for Class: NumerosComplexos (org.example)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">NumerosComplexos</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    83,3%
+  </span>
+  <span class="absValue">
+    (5/6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    95%
+  </span>
+  <span class="absValue">
+    (19/20)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.example;
+&nbsp;
+<b class="nc">&nbsp;public class NumerosComplexos {</b>
+<b class="fc">&nbsp;    public static  int[] valuesArray = new int[4];</b>
+<b class="fc">&nbsp;    public static  int index =0;</b>
+&nbsp;
+&nbsp;    public static void obterNumeros(String x) {
+<b class="fc">&nbsp;        for(int i =0; i &lt; x.length(); i++) {</b>
+&nbsp;            try{
+<b class="fc">&nbsp;                char result = x.charAt(i);</b>
+<b class="fc">&nbsp;                int valueResult = Integer.parseInt(String.valueOf(result));</b>
+<b class="fc">&nbsp;                valuesArray[index] = valueResult;</b>
+<b class="fc">&nbsp;                index++;</b>
+<b class="fc">&nbsp;            }catch(Exception e) {</b>
+<b class="fc">&nbsp;                continue;</b>
+<b class="fc">&nbsp;            }</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;    public static String Soma() {
+<b class="fc">&nbsp;        int a = valuesArray[0] + valuesArray[2];</b>
+<b class="fc">&nbsp;        int b = valuesArray[1] + valuesArray[3];</b>
+&nbsp;
+<b class="fc">&nbsp;        return a + &quot;+&quot; +b+&quot;i&quot;;</b>
+&nbsp;    }
+&nbsp;    public static String Subtrair() {
+<b class="fc">&nbsp;        int a = valuesArray[0] - valuesArray[2];</b>
+<b class="fc">&nbsp;        int b = valuesArray[1] - valuesArray[3];</b>
+&nbsp;
+<b class="fc">&nbsp;        return a + &quot;+&quot; +b+&quot;i&quot;;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public static String Modulo() {
+&nbsp;
+<b class="fc">&nbsp;        int a = (int) (Math.pow(valuesArray[0],2) + Math.pow(valuesArray[1],2));</b>
+<b class="fc">&nbsp;        int b = (int) (Math.pow(valuesArray[2],2) + Math.pow(valuesArray[3],2));</b>
+&nbsp;
+<b class="fc">&nbsp;        return &quot;?&quot;+a+&quot;, ?&quot;+b;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-12-10 20:19</div>
+</div>
+</body>
+</html>
